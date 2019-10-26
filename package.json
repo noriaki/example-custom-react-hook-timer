@@ -6,7 +6,16 @@
     "node": "10.x"
   },
   "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build"
+  },
   "repository": "git@github.com:noriaki/example-custom-react-hook-timer.git",
   "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.1.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0"
+  }
 }
