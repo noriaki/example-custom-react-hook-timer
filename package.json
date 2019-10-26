@@ -1,0 +1,12 @@
+{
+  "name": "example-custom-react-hook-timer",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "10.x"
+  },
+  "main": "index.js",
+  "repository": "git@github.com:noriaki/example-custom-react-hook-timer.git",
+  "author": "Noriaki Uchiyama <uchiyama.noriaki@gmail.com>",
+  "license": "MIT"
+}
