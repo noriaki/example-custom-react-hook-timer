@@ -1,10 +1,9 @@
 import useTimer from '../hooks/timer'
 
 export default ({ value, delay }) => {
-  const [
-    remaining,
-    { isActive, start, stop, restart, reset },
-  ] = useTimer({ value, delay })
+  const {
+    remaining, isActive, start, stop, restart, reset,
+  } = useTimer({ value, delay })
 
   return (
     <div>

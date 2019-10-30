@@ -38,8 +38,7 @@ export default ({ value, delay }) => {
 
   const reset = () => setRemaining(value)
 
-  return [
-    remaining,
-    { isActive, start, stop, restart, reset },
-  ]
+  return {
+    remaining, isActive, start, stop, restart, reset, initialValue: value,
+  }
 }
