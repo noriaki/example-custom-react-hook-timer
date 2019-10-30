@@ -6,6 +6,7 @@ export default ({ value, delay }) => {
   const [remaining, setRemaining] = useState(value)
   const [finishTime, setFinishTime] = useState(Date.now() + remaining)
   const [isActive, setActive] = useState(true)
+  const timerId = useRef(null)
 
   useEffect(() => {
     start()
@@ -13,7 +14,7 @@ export default ({ value, delay }) => {
   }, [finishTime]) // <= componentDidMount, when `finishTime` is updated
 
   const start = () => {
-    timerId = setInterval(() => {
+    timerId.current = setInterval(() => {
       const nextRemaining = finishTime - Date.now()
       if (nextRemaining > 0) {
         setRemaining(nextRemaining)
@@ -27,9 +28,9 @@ export default ({ value, delay }) => {
 
   const stop = () => {
     setActive(false)
-    if (timerId !== null) {
-      clearInterval(timerId)
-      timerId = null
+    if (timerId.current !== null) {
+      clearInterval(timerId.current)
+      timerId.current = null
     }
   }
 
